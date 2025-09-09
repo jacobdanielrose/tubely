@@ -54,7 +54,7 @@ func (cfg *apiConfig) handlerUploadThumbnail(w http.ResponseWriter, r *http.Requ
 		return
 	}
 
-	assetPath, err := getAssetPath(videoID, mediaType)
+	assetPath, err := getAssetPath(mediaType)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "Unable to determine file type.", nil)
 		return
